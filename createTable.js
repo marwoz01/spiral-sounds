@@ -9,20 +9,21 @@ async function createTable() {
   });
 
   await db.exec(`
-      CREATE TABLE IF NOT EXISTS products (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            title TEXT NOT NULL,  
-            artist TEXT NOT NULL, 
-            price REAL NOT NULL,
-            image TEXT NOT NULL, 
-            year INTEGER,
-            genre TEXT,
-            stock INTEGER
+            CREATE TABLE IF NOT EXISTS products (
+                  id INTEGER PRIMARY KEY AUTOINCREMENT, 
+                  title TEXT NOT NULL, 
+                  artist TEXT NOT NULL,
+                  price REAL NOT NULL,
+                  image TEXT NOT NULL,
+                  year INTEGER,
+                  genre TEXT,
+                  stock INTEGER 
             )
+      
       `);
 
   await db.close();
-  console.log("Table created");
+  console.log("table created");
 }
 
 createTable();

@@ -1,7 +1,7 @@
 import express from "express";
-import { getProducts, getGenres } from "../controllers/productsControllers.js";
+import { getGenres, getProducts } from "../controllers/productsControllers.js";
 
 export const productsRouter = express.Router();
 
-productsRouter.get("/api/products/genres", getGenres);
-productsRouter.get("/api/products", getProducts);
+productsRouter.get("/genres", getGenres);
+productsRouter.get("/", getProducts);
